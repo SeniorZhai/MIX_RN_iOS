@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2064B81232B832C10C8D5BE2 /* Pods_mix_rn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BD986EF8ECD559B2C45554 /* Pods_mix_rn.framework */; };
 		FD4809DE20A58A5A00BB3E78 /* MyBridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4809DD20A58A5A00BB3E78 /* MyBridgeModule.m */; };
+		FD63C45B20A5AB2B00AE7510 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = FD63C45920A5AB2B00AE7510 /* main.jsbundle */; };
+		FD63C45C20A5AB2B00AE7510 /* main.jsbundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = FD63C45A20A5AB2B00AE7510 /* main.jsbundle.meta */; };
 		FDAF55A320A562290012D637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF55A220A562290012D637 /* AppDelegate.swift */; };
 		FDAF55A520A562290012D637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF55A420A562290012D637 /* ViewController.swift */; };
 		FDAF55A820A562290012D637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAF55A620A562290012D637 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		FD4809DB20A58A5900BB3E78 /* mix_rn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mix_rn-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD4809DC20A58A5A00BB3E78 /* MyBridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBridgeModule.h; sourceTree = "<group>"; };
 		FD4809DD20A58A5A00BB3E78 /* MyBridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBridgeModule.m; sourceTree = "<group>"; };
+		FD63C45920A5AB2B00AE7510 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.jsbundle; path = ../main.jsbundle; sourceTree = "<group>"; };
+		FD63C45A20A5AB2B00AE7510 /* main.jsbundle.meta */ = {isa = PBXFileReference; lastKnownFileType = file; name = main.jsbundle.meta; path = ../main.jsbundle.meta; sourceTree = "<group>"; };
 		FDAF559F20A562290012D637 /* mix_rn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mix_rn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAF55A220A562290012D637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDAF55A420A562290012D637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		FDAF559620A562290012D637 = {
 			isa = PBXGroup;
 			children = (
+				FD63C45920A5AB2B00AE7510 /* main.jsbundle */,
+				FD63C45A20A5AB2B00AE7510 /* main.jsbundle.meta */,
 				FDAF55A120A562290012D637 /* mix_rn */,
 				FDAF55A020A562290012D637 /* Products */,
 				0198E735B312CF0DD2129144 /* Pods */,
@@ -156,6 +162,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD63C45B20A5AB2B00AE7510 /* main.jsbundle in Resources */,
+				FD63C45C20A5AB2B00AE7510 /* main.jsbundle.meta in Resources */,
 				FDAF55AD20A5622B0012D637 /* LaunchScreen.storyboard in Resources */,
 				FDAF55AA20A5622B0012D637 /* Assets.xcassets in Resources */,
 				FDAF55A820A562290012D637 /* Main.storyboard in Resources */,
