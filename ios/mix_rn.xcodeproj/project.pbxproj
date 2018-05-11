@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2064B81232B832C10C8D5BE2 /* Pods_mix_rn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BD986EF8ECD559B2C45554 /* Pods_mix_rn.framework */; };
+		FD4809DE20A58A5A00BB3E78 /* MyBridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4809DD20A58A5A00BB3E78 /* MyBridgeModule.m */; };
 		FDAF55A320A562290012D637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF55A220A562290012D637 /* AppDelegate.swift */; };
 		FDAF55A520A562290012D637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF55A420A562290012D637 /* ViewController.swift */; };
 		FDAF55A820A562290012D637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAF55A620A562290012D637 /* Main.storyboard */; };
@@ -19,6 +20,9 @@
 		0070FD94C11DC3388C72BFF6 /* Pods-mix_rn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mix_rn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mix_rn/Pods-mix_rn.debug.xcconfig"; sourceTree = "<group>"; };
 		A0BD986EF8ECD559B2C45554 /* Pods_mix_rn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mix_rn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8966B91A753882F08385D9 /* Pods-mix_rn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mix_rn.release.xcconfig"; path = "Pods/Target Support Files/Pods-mix_rn/Pods-mix_rn.release.xcconfig"; sourceTree = "<group>"; };
+		FD4809DB20A58A5900BB3E78 /* mix_rn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mix_rn-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD4809DC20A58A5A00BB3E78 /* MyBridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBridgeModule.h; sourceTree = "<group>"; };
+		FD4809DD20A58A5A00BB3E78 /* MyBridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBridgeModule.m; sourceTree = "<group>"; };
 		FDAF559F20A562290012D637 /* mix_rn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mix_rn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAF55A220A562290012D637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDAF55A420A562290012D637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,9 @@
 				FDAF55A920A5622B0012D637 /* Assets.xcassets */,
 				FDAF55AB20A5622B0012D637 /* LaunchScreen.storyboard */,
 				FDAF55AE20A5622B0012D637 /* Info.plist */,
+				FD4809DC20A58A5A00BB3E78 /* MyBridgeModule.h */,
+				FD4809DD20A58A5A00BB3E78 /* MyBridgeModule.m */,
+				FD4809DB20A58A5900BB3E78 /* mix_rn-Bridging-Header.h */,
 			);
 			path = mix_rn;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 				TargetAttributes = {
 					FDAF559E20A562290012D637 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -209,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDAF55A520A562290012D637 /* ViewController.swift in Sources */,
+				FD4809DE20A58A5A00BB3E78 /* MyBridgeModule.m in Sources */,
 				FDAF55A320A562290012D637 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,12 +363,18 @@
 			baseConfigurationReference = 0070FD94C11DC3388C72BFF6 /* Pods-mix_rn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62B9844674;
 				INFOPLIST_FILE = mix_rn/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mix.rn.mix-rn";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mix_rn/mix_rn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,12 +385,17 @@
 			baseConfigurationReference = DB8966B91A753882F08385D9 /* Pods-mix_rn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62B9844674;
 				INFOPLIST_FILE = mix_rn/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mix.rn.mix-rn";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mix_rn/mix_rn-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
